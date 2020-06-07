@@ -6,99 +6,140 @@ import org.hyperskill.hstest.testcase.TestCase;
 import java.util.List;
 
 
-public class CoffeeMachineTest extends StageTest<String> {
+class TestClue {
+    boolean cond;
+    int num;
+    boolean showTests;
+    TestClue(boolean c, int n, boolean showTests) {
+        cond = c;
+        num = n;
+        this.showTests = showTests;
+    }
+}
+
+public class CoffeeMachineTest extends StageTest<TestClue> {
 
     public CoffeeMachineTest() {
         super(CoffeeMachine.class);
     }
 
     @Override
-    public List<TestCase<String>> generate() {
+    public List<TestCase<TestClue>> generate() {
         return List.of(
-            new TestCase<String>()
-                .setInput("25")
-                .setAttach("25"),
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 0, true))
+                .setInput("300\n65\n111\n1"),
 
-            new TestCase<String>()
-                .setInput("125")
-                .setAttach("125"),
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 2, true))
+                .setInput("600\n153\n100\n1"),
 
-            new TestCase<String>()
-                .setInput("1")
-                .setAttach("1"),
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 2, true))
+                .setInput("1400\n150\n100\n1"),
 
-            new TestCase<String>()
-                .setInput("123")
-                .setAttach("123")
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 2, true))
+                .setInput("1400\n1500\n45\n1"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(false, 2, true))
+                .setInput("599\n250\n200\n10"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 867, true))
+                .setInput( "345640\n43423\n23234\n1"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(false, 1548, true))
+                .setInput("345640\n434230\n23234\n19246"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(false, 172, true))
+                .setInput( "34564\n43423\n23234\n19246"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 0, false))
+                .setInput("399\n112\n111\n1"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 3, false))
+                .setInput("2400\n249\n100\n1"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 1, false))
+                .setInput("1400\n1500\n44\n1"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(false, 2, false))
+                .setInput("500\n250\n200\n10"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 171, false))
+                .setInput("34564\n43423\n23234\n1"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(true, 1547, false))
+                .setInput("345640\n434230\n23234\n1"),
+
+            new TestCase<TestClue>()
+                .setAttach(new TestClue(false, 868, false))
+                .setInput("345640\n43423\n23234\n19246")
+
         );
     }
 
     @Override
-    public CheckResult check(String reply, String clue) {
-        String[] lines = reply.split("\\n");
-        if (lines.length < 3) {
-            return new CheckResult(false,
-                "Output contains less than 3 lines, but should output at least 3 lines");
-        }
-        String[] last3Lines = {
-            lines[lines.length - 3],
-            lines[lines.length - 2],
-            lines[lines.length - 1]
-        };
+    public CheckResult check(String reply, TestClue clue) {
+        String[] lines = reply.trim().split(":");
+        String userOutput = lines[lines.length - 1].trim();
+        String loweredOutput = userOutput.toLowerCase();
+        boolean ans = clue.cond;
+        int amount = clue.num;
+        if (ans && loweredOutput.contains("yes")) {
+            if (amount > 0) {
+                boolean isCorrect = loweredOutput.contains(Integer.toString(amount));
+                if (isCorrect) {
+                    return CheckResult.correct();
+                } else {
 
-        int cups = Integer.parseInt(clue);
-        boolean water = false, milk = false, beans = false;
+                    String rightOutput =
+                        "Yes, I can make that amount of coffee" +
+                            " (and even " + amount + " more than that)";
 
-        for(String line : last3Lines) {
-            line = line.toLowerCase();
-
-            if(line.contains("milk")) {
-                milk = line.contains(Integer.toString(cups * 50));
-                if (!milk) {
-                    return new CheckResult(false,
-                        "For the input " + clue + " your program output:\n\"" +
-                            line + "\"\nbut the amount of milk should be " + (cups * 50));
+                    if (clue.showTests) {
+                        return new CheckResult(false,
+                            "Your output:\n" +
+                                userOutput +
+                                "\nRight output:\n" +
+                                rightOutput);
+                    } else {
+                        return CheckResult.wrong("");
+                    }
                 }
+            }
+            return CheckResult.correct();
+        } else {
+            boolean cond1 = loweredOutput.contains("no");
+            boolean cond2 = loweredOutput.contains(Integer.toString(amount));
 
-            } else if(line.contains("water")) {
-                water = line.contains(Integer.toString(cups * 200));
-                if (!water) {
-                    return new CheckResult(false,
-                        "For the input " + clue + " your program output:\n" +
-                            line + "\nbut the amount of water should be " + (cups * 200));
-                }
-
-            } else if(line.contains("beans")) {
-                beans = line.contains(Integer.toString(cups * 15));
-                if (!beans) {
-                    return new CheckResult(false,
-                        "For the input " + clue + " your program output:\n" +
-                            line + "\nbut the amount of beans should be " + (cups * 15));
-                }
-
-
+            if (cond1 && cond2) {
+                return CheckResult.correct();
             } else {
-                return new CheckResult(false,
-                    "One of the last 3 lines " +
-                        "doesn't contain \"milk\", \"water\" or \"beans\"");
+
+                String rightOutput = "No, I can make only " +
+                    amount +" cup(s) of coffee";
+
+                if (clue.showTests) {
+                    return new CheckResult(false,
+                        "Your output:\n" +
+                        userOutput +
+                        "\nRight output:\n" +
+                        rightOutput);
+                } else {
+                    return CheckResult.wrong("");
+                }
             }
         }
-
-        if (!water) {
-            return new CheckResult(false,
-                "There is no line with amount of water");
-        }
-
-        if (!milk) {
-            return new CheckResult(false,
-                "There is no line with amount of milk");
-        }
-
-        if (!beans) {
-            return new CheckResult(false,
-                "There is no line with amount of coffee beans");
-        }
-
-        return CheckResult.correct();
     }
 }

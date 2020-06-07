@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CoffeeMachineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-07T06:37:52" hostname="N3XuSPrIM3" time="0.113">
+<testsuite name="CoffeeMachineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-07T07:00:17" hostname="N3XuSPrIM3" time="0.223">
   <properties/>
-  <testcase name="start" classname="CoffeeMachineTest" time="0.113"/>
+  <testcase name="start" classname="CoffeeMachineTest" time="0.223"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 Starting to make a coffee
@@ -11,12 +11,15 @@ Mixing boiled water with crushed coffee beans
 Pouring coffee into the cup
 Pouring some milk into the cup
 Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 300
+Write how many ml of milk the coffee machine has:
+> 65
+Write how many grams of coffee beans the coffee machine has:
+> 111
 Write how many cups of coffee you will need:
-> 25
-For 25 cups of coffee you will need:
-5000 ml of water
-1250 ml of milk
-375 g of coffee beans
+> 1
+Yes, I can make that amount of coffee
 ?[1;31m
 Start test 2?[0m
 Starting to make a coffee
@@ -26,12 +29,15 @@ Mixing boiled water with crushed coffee beans
 Pouring coffee into the cup
 Pouring some milk into the cup
 Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 600
+Write how many ml of milk the coffee machine has:
+> 153
+Write how many grams of coffee beans the coffee machine has:
+> 100
 Write how many cups of coffee you will need:
-> 125
-For 125 cups of coffee you will need:
-25000 ml of water
-6250 ml of milk
-1875 g of coffee beans
+> 1
+Yes, I can make that amount of coffee (and even 2 more than that)
 ?[1;31m
 Start test 3?[0m
 Starting to make a coffee
@@ -41,12 +47,15 @@ Mixing boiled water with crushed coffee beans
 Pouring coffee into the cup
 Pouring some milk into the cup
 Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 1400
+Write how many ml of milk the coffee machine has:
+> 150
+Write how many grams of coffee beans the coffee machine has:
+> 100
 Write how many cups of coffee you will need:
 > 1
-For 1 cups of coffee you will need:
-200 ml of water
-50 ml of milk
-15 g of coffee beans
+Yes, I can make that amount of coffee (and even 2 more than that)
 ?[1;31m
 Start test 4?[0m
 Starting to make a coffee
@@ -56,12 +65,213 @@ Mixing boiled water with crushed coffee beans
 Pouring coffee into the cup
 Pouring some milk into the cup
 Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 1400
+Write how many ml of milk the coffee machine has:
+> 1500
+Write how many grams of coffee beans the coffee machine has:
+> 45
 Write how many cups of coffee you will need:
-> 123
-For 123 cups of coffee you will need:
-24600 ml of water
-6150 ml of milk
-1845 g of coffee beans
+> 1
+Yes, I can make that amount of coffee (and even 2 more than that)
+?[1;31m
+Start test 5?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 599
+Write how many ml of milk the coffee machine has:
+> 250
+Write how many grams of coffee beans the coffee machine has:
+> 200
+Write how many cups of coffee you will need:
+> 10
+No, I can make only 2 cup(s) of coffee
+?[1;31m
+Start test 6?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 345640
+Write how many ml of milk the coffee machine has:
+> 43423
+Write how many grams of coffee beans the coffee machine has:
+> 23234
+Write how many cups of coffee you will need:
+> 1
+Yes, I can make that amount of coffee (and even 867 more than that)
+?[1;31m
+Start test 7?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 345640
+Write how many ml of milk the coffee machine has:
+> 434230
+Write how many grams of coffee beans the coffee machine has:
+> 23234
+Write how many cups of coffee you will need:
+> 19246
+No, I can make only 1548 cup(s) of coffee
+?[1;31m
+Start test 8?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 34564
+Write how many ml of milk the coffee machine has:
+> 43423
+Write how many grams of coffee beans the coffee machine has:
+> 23234
+Write how many cups of coffee you will need:
+> 19246
+No, I can make only 172 cup(s) of coffee
+?[1;31m
+Start test 9?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 399
+Write how many ml of milk the coffee machine has:
+> 112
+Write how many grams of coffee beans the coffee machine has:
+> 111
+Write how many cups of coffee you will need:
+> 1
+Yes, I can make that amount of coffee
+?[1;31m
+Start test 10?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 2400
+Write how many ml of milk the coffee machine has:
+> 249
+Write how many grams of coffee beans the coffee machine has:
+> 100
+Write how many cups of coffee you will need:
+> 1
+Yes, I can make that amount of coffee (and even 3 more than that)
+?[1;31m
+Start test 11?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 1400
+Write how many ml of milk the coffee machine has:
+> 1500
+Write how many grams of coffee beans the coffee machine has:
+> 44
+Write how many cups of coffee you will need:
+> 1
+Yes, I can make that amount of coffee (and even 1 more than that)
+?[1;31m
+Start test 12?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 500
+Write how many ml of milk the coffee machine has:
+> 250
+Write how many grams of coffee beans the coffee machine has:
+> 200
+Write how many cups of coffee you will need:
+> 10
+No, I can make only 2 cup(s) of coffee
+?[1;31m
+Start test 13?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 34564
+Write how many ml of milk the coffee machine has:
+> 43423
+Write how many grams of coffee beans the coffee machine has:
+> 23234
+Write how many cups of coffee you will need:
+> 1
+Yes, I can make that amount of coffee (and even 171 more than that)
+?[1;31m
+Start test 14?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 345640
+Write how many ml of milk the coffee machine has:
+> 434230
+Write how many grams of coffee beans the coffee machine has:
+> 23234
+Write how many cups of coffee you will need:
+> 1
+Yes, I can make that amount of coffee (and even 1547 more than that)
+?[1;31m
+Start test 15?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many ml of water the coffee machine has:
+> 345640
+Write how many ml of milk the coffee machine has:
+> 43423
+Write how many grams of coffee beans the coffee machine has:
+> 23234
+Write how many cups of coffee you will need:
+> 19246
+No, I can make only 868 cup(s) of coffee
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
