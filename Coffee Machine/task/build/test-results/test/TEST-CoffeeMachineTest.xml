@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CoffeeMachineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-07T06:37:52" hostname="N3XuSPrIM3" time="0.113">
+  <properties/>
+  <testcase name="start" classname="CoffeeMachineTest" time="0.113"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many cups of coffee you will need:
+> 25
+For 25 cups of coffee you will need:
+5000 ml of water
+1250 ml of milk
+375 g of coffee beans
+?[1;31m
+Start test 2?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many cups of coffee you will need:
+> 125
+For 125 cups of coffee you will need:
+25000 ml of water
+6250 ml of milk
+1875 g of coffee beans
+?[1;31m
+Start test 3?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many cups of coffee you will need:
+> 1
+For 1 cups of coffee you will need:
+200 ml of water
+50 ml of milk
+15 g of coffee beans
+?[1;31m
+Start test 4?[0m
+Starting to make a coffee
+Grinding coffee beans
+Boiling water
+Mixing boiled water with crushed coffee beans
+Pouring coffee into the cup
+Pouring some milk into the cup
+Coffee is ready!
+Write how many cups of coffee you will need:
+> 123
+For 123 cups of coffee you will need:
+24600 ml of water
+6150 ml of milk
+1845 g of coffee beans
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
