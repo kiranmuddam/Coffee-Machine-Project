@@ -1,0 +1,21 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public class Main {
+
+        public static void main(String[] args) {
+
+        }
+    }
+
+    /* At least two constants start with STAR
+    enum Secret {
+        STAR, CRASH, START, // ...
+    }
+    */
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2970
+status: Failed
+record: -1
