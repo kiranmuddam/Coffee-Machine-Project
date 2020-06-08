@@ -1,12 +1,11 @@
 package machine;
 import java.util.Scanner;
 public class CoffeeMachine {
-        int totalMoney = 550;
-        int waterStock = 400;
-        int milkStock = 540;
-        int beansStock = 120;
-        int stockDisposableCups = 9;
-
+    int totalMoney = 550;
+    int waterStock = 400;
+    int milkStock = 540;
+    int beansStock = 120;
+    int stockDisposableCups = 9;
     public void displayStatsCoffeeMachine() {
         System.out.println("The coffee machine has:");
         System.out.println(waterStock + " of water");
@@ -15,7 +14,6 @@ public class CoffeeMachine {
         System.out.println(stockDisposableCups + " of disposable cups");
         System.out.println("$" + totalMoney + " of money");
     }
-
     public boolean checkCoffeeItemsStock(String coffeeType) {
         if (coffeeType.equals("1")) {
             return waterStock >= 250 && beansStock >= 16 && stockDisposableCups >= 1;
@@ -26,7 +24,6 @@ public class CoffeeMachine {
         }
         return false;
     }
-
     public void buyCoffee(String coffeeType) {
         if (coffeeType.equals("1") && checkCoffeeItemsStock("1")) {
             waterStock = waterStock - 250;
@@ -55,7 +52,6 @@ public class CoffeeMachine {
         }
         System.out.println();
     }
-
     public void fillCoffeeMachine(int waterInput, int milkInput, int beansInput, int cupsInput) {
         waterStock = waterStock + waterInput;
         milkStock = milkStock + milkInput;
@@ -63,13 +59,11 @@ public class CoffeeMachine {
         stockDisposableCups = stockDisposableCups + cupsInput;
         System.out.println();
     }
-
     public void takeMoney() {
         System.out.println("I gave you $" + totalMoney);
         totalMoney = 0;
         System.out.println();
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         CoffeeMachine myCoffeeMachine = new CoffeeMachine();
