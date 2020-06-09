@@ -33,6 +33,8 @@ topics:
     theory_id: 9704
   - title: Command line overview
     theory_id: 8977
+  - title: Parameters and options
+    theory_id: 9746
   - title: Types and variables
     theory_id: 3518
   - title: Comments

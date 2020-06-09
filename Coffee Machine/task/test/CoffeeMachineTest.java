@@ -35,120 +35,120 @@ public class CoffeeMachineTest extends StageTest<TestClue> {
         return List.of(
             new TestCase<TestClue>()
                 .setAttach(new TestClue(
-                700 - 400,
-                390 - 540,
-                80 - 120 ,
-                7 - 9,
-                0 - 550,
+                    700 - 400,
+                    390 - 540,
+                    80 - 120 ,
+                    7 - 9,
+                    0 - 550,
                     "This test is exactly " +
                         "like in the example - try to run it by yourself"))
                 .setInput(
                     "remaining\n" +
-                    "buy\n" +
-                    "2\n" +
-                    "buy\n" +
-                    "2\n" +
-                    "fill\n" +
-                    "1000\n" +
-                    "0\n" +
-                    "0\n" +
-                    "0\n" +
-                    "buy\n" +
-                    "2\n" +
-                    "take\n" +
-                    "remaining\n" +
-                    "exit\n"),
+                        "buy\n" +
+                        "2\n" +
+                        "buy\n" +
+                        "2\n" +
+                        "fill\n" +
+                        "1000\n" +
+                        "0\n" +
+                        "0\n" +
+                        "0\n" +
+                        "buy\n" +
+                        "2\n" +
+                        "take\n" +
+                        "remaining\n" +
+                        "exit\n"),
 
             new TestCase<TestClue>()
                 .setAttach(new TestClue(
-                3000,
-                3000,
-                3000 ,
-                3000,
-                0,
+                    3000,
+                    3000,
+                    3000 ,
+                    3000,
+                    0,
                     "This test checks \"fill\" action"))
                 .setInput(
                     "remaining\n" +
-                    "fill\n" +
-                    "3000\n" +
-                    "3000\n" +
-                    "3000\n" +
-                    "3000\n" +
-                    "remaining\n" +
-                    "exit\n"),
+                        "fill\n" +
+                        "3000\n" +
+                        "3000\n" +
+                        "3000\n" +
+                        "3000\n" +
+                        "remaining\n" +
+                        "exit\n"),
 
             new TestCase<TestClue>()
                 .setAttach(new TestClue(
-                -250,
-                0,
-                -16 ,
-                -1,
-                4, "This test checks \"buy\" " +
+                    -250,
+                    0,
+                    -16 ,
+                    -1,
+                    4, "This test checks \"buy\" " +
                     "action with the first variant of coffee"))
                 .setInput(
                     "remaining\n" +
-                    "buy\n" +
-                    "1\n" +
-                    "remaining\n" +
-                    "exit\n"),
+                        "buy\n" +
+                        "1\n" +
+                        "remaining\n" +
+                        "exit\n"),
 
             new TestCase<TestClue>()
                 .setAttach(new TestClue(
-                -350,
-                -75,
-                -20 ,
-                -1,
-                7, "This test checks \"buy\" " +
+                    -350,
+                    -75,
+                    -20 ,
+                    -1,
+                    7, "This test checks \"buy\" " +
                     "action with the second variant of coffee"))
                 .setInput(
                     "remaining\n" +
-                    "buy\n" +
-                    "2\n" +
-                    "remaining\n" +
-                    "exit\n"),
+                        "buy\n" +
+                        "2\n" +
+                        "remaining\n" +
+                        "exit\n"),
 
             new TestCase<TestClue>()
                 .setAttach(new TestClue(
-                -200,
-                -100,
-                -12 ,
-                -1,
-                6, "This test checks \"buy\" " +
+                    -200,
+                    -100,
+                    -12 ,
+                    -1,
+                    6, "This test checks \"buy\" " +
                     "action with the third variant of coffee"))
                 .setInput(
                     "remaining\n" +
-                    "buy\n" +
-                    "3\n" +
-                    "remaining\n" +
-                    "exit\n"),
+                        "buy\n" +
+                        "3\n" +
+                        "remaining\n" +
+                        "exit\n"),
 
             new TestCase<TestClue>()
                 .setAttach(new TestClue(
-                0,
-                0,
-                0 ,
-                0,
-                -550, "This test checks \"take\" action"))
+                    0,
+                    0,
+                    0 ,
+                    0,
+                    -550, "This test checks \"take\" action"))
                 .setInput(
                     "remaining\n" +
-                    "take\n" +
-                    "remaining\n" +
-                    "exit\n"),
+                        "take\n" +
+                        "remaining\n" +
+                        "exit\n"),
 
             new TestCase<TestClue>()
                 .setAttach(new TestClue(
-                0,
-                0,
-                0 ,
-                0,
-                0, "This test checks \"back\" " +
+                    0,
+                    0,
+                    0 ,
+                    0,
+                    0, "This test checks \"back\" " +
                     "action right after \"buy\" action"))
                 .setInput(
                     "remaining\n" +
-                    "buy\n" +
-                    "back\n" +
-                    "remaining\n" +
-                    "exit\n")
+                        "buy\n" +
+                        "back\n" +
+                        "remaining\n" +
+                        "exit\n")
         );
     }
 
@@ -256,10 +256,10 @@ public class CoffeeMachineTest extends StageTest<TestClue> {
 
         boolean isCorrect =
             diffWater == water_ &&
-            diffMilk == milk_ &&
-            diffBeans == beans_ &&
-            diffCups == cups_ &&
-            diffMoney == money_;
+                diffMilk == milk_ &&
+                diffBeans == beans_ &&
+                diffCups == cups_ &&
+                diffMoney == money_;
 
         return new CheckResult(isCorrect, clue.feedback);
     }
