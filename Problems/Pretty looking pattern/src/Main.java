@@ -13,7 +13,8 @@ class Main {
         }
         for (int i = 0; i < rows - 1; ++i) {
             for (int j = 0; j < columns - 1; ++j) {
-                if (myArray[i][j] == myArray[i][j + 1] && myArray[i + 1][j] == myArray[i + 1][j + 1] && myArray[i][j] == myArray[i + 1][j]) {
+                boolean result1 = myArray[i][j] == myArray[i][j + 1] && myArray[i + 1][j] == myArray[i + 1][j + 1];
+                if (result1 && myArray[i][j] == myArray[i + 1][j]) {
                     System.out.println("NO");
                     return;
                 }
